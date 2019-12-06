@@ -1,0 +1,4 @@
+<!--components/productItem/product-item.wxml-->
+<view class="product">
+  <image class="img" src="{{detail.small_image}}" />
+</view>

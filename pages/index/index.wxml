@@ -1,0 +1,139 @@
+<view class="head">
+  <view class="wrapper">
+    <view class="locationWrapper">
+      <image class="icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTc0ODQzNTU2MTczIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjExOTEiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTUxMiAxNmMtMjA3LjI5NiAwLTM3NS4yOTYgMTY4LjA2NC0zNzUuMjk2IDM3NS4yOTYgMCA1Mi43MzYgMTEuMDcyIDEwMi44NDggMzAuNjU2IDE0OC40MTZDMjM5Ljg3MiA3NDcuMjY0IDM3MS45MDQgOTE1LjIgNTEyIDEwMTQuNTkyYzE0NS40NzItODYuNjU2IDI1MC4wNDgtMjQ0LjYwOCAzMzAuNjg4LTQ0NS41NjggMjguNDE2LTUyLjggNDQuNjcyLTExMy4zNDQgNDQuNjcyLTE3Ny41MzZDODg3LjM2IDE4NC4wNjQgNzE5LjI5NiAxNiA1MTIgMTZ6TTUxMiA2MzIuNzA0Yy0xMzMuMjQ4IDAtMjQxLjM0NC0xMDguMDMyLTI0MS4zNDQtMjQxLjM0NCAwLTEzMy4yNDggMTA4LjA5Ni0yNDEuMjggMjQxLjM0NC0yNDEuMjggMTMzLjMxMiAwIDI0MS4zNDQgMTA4LjAzMiAyNDEuMzQ0IDI0MS4zNDRDNzUzLjM0NCA1MjQuNjcyIDY0NS4zMTIgNjMyLjcwNCA1MTIgNjMyLjcwNHoiIHAtaWQ9IjExOTIiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48L3N2Zz4=" />
+      <view class="address">请选择位置..</view>
+    </view>
+    <view class="searchWrapper">
+      <view class="searchContent">
+        <view class="iconSearchWrapper">
+          <icon type="search" size="15" color="#999999" />
+          <view class="searchPrompt">输入商品名称</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="swiperWrapper">
+    <swiper class="swiper-box" indicator-dots="true" autoplay="true" interval="2000" duration="500">
+      <block wx:for="{{sowing_list}}" wx:for-item="item" wx:key="index">
+        <swiper-item>
+          <image class="img" src="{{item.icon_url}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="tip">
+      <view class="tipBox">
+        <image class="img" src="../../images/icon/transport.png" />
+        <view class="tipText">最快29分钟送达</view>
+      </view>
+      <view class="tipBox">
+        <image class="img" src="../../images/icon/money.png" />
+        <view class="tipText">0元起送 0配送费</view>
+      </view>
+      <view class="tipBox">
+        <image class="img" src="../../images/icon/seal.png" />
+        <view class="tipText">安心退</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <image class="adImg" src="{{home_ad}}" />
+</view>
+<view class="typeWrapper">
+  <view class="typeItem" wx:for="{{nav_list}}" wx:for-item="item" wx:key="index">
+    <image class="img" src="{{item.icon_url}}" />
+    <text class="">{{item.name}}</text>
+  </view>
+</view>
+<view class="vipPage">
+  <image class="icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTc0OTA1NDIyNTY5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjIxMzUiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTE5NC4zODU2MiA3ODYuOTg4NDYzTDEyMC4yMTk3NjUgNDA0LjU4MzIxbDE3OS45ODE2NDkgMzkuMDEzOTI0TDUxMS45OTcgMTg5LjIzOTYzbDIxMS43OTk1ODYgMjU0LjM1NzUwNCAxNzkuOTgxNjQ5LTM5LjAxMzkyNC03NC4xNjU4NTUgMzgyLjQwNTI1M3oiIGZpbGw9IiNDRkVCNzAiIHAtaWQ9IjIxMzYiPjwvcGF0aD48cGF0aCBkPSJNMTA4Ljk3Mzc4NyAzODQuMjg1MjQ5bS04My4yOTM4MzcgMGE4My4yOTM4MzcgODMuMjkzODM3IDAgMSAwIDE2Ni41ODc2NzQgMCA4My4yOTM4MzcgODMuMjkzODM3IDAgMSAwLTE2Ni41ODc2NzQgMFoiIGZpbGw9IiNGRUNDODUiIHAtaWQ9IjIxMzciPjwvcGF0aD48cGF0aCBkPSJNOTE1LjAzMjIxMyAzODQuMjg1MjQ5bS04My4yOTM4MzcgMGE4My4yOTM4MzcgODMuMjkzODM3IDAgMSAwIDE2Ni41ODc2NzQgMCA4My4yOTM4MzcgODMuMjkzODM3IDAgMSAwLTE2Ni41ODc2NzQgMFoiIGZpbGw9IiNGRUNDODUiIHAtaWQ9IjIxMzgiPjwvcGF0aD48cGF0aCBkPSJNNTEyLjAwMyAxNTUuOTA3Njk1bS04My4yOTM4MzcgMGE4My4yOTM4MzcgODMuMjkzODM3IDAgMSAwIDE2Ni41ODc2NzQgMCA4My4yOTM4MzcgODMuMjkzODM3IDAgMSAwLTE2Ni41ODc2NzQgMFoiIGZpbGw9IiNGRUNDODUiIHAtaWQ9IjIxMzkiPjwvcGF0aD48cGF0aCBkPSJNMTk0Ljg4NTYxOSA3ODYuOTgwNDYzaDYzNC4yMjY3NjJ2MTY0LjQxMTY3OUgxOTQuODg1NjE5eiIgZmlsbD0iI0ZFQ0M4NSIgcC1pZD0iMjE0MCI+PC9wYXRoPjxwYXRoIGQ9Ik01ODcuMjY0ODUzIDQ2MC41NjcxYy00Mi4xNzE5MTggMC03NS4yNTk4NTMgNDcuMDIxOTA4LTc1LjI1OTg1MyA0Ny4wMjE5MDlzLTMxLjIwOTkzOS00Ny4wMjE5MDgtNzUuMjc3ODUzLTQ3LjAyMTkwOWMtNDIuODYzOTE2IDAtNzcuODY1ODQ4IDM1LjM1MTkzMS04MC4xNTU4NDMgNzguMTU1ODQ4LTEuMjg3OTk3IDI0LjE4MTk1MyA2LjUwNTk4NyA0Mi41ODU5MTcgMTcuNDg3OTY1IDU5LjI1MTg4NCAyMS45NDc5NTcgMzMuMjk5OTM1IDExNy45MDE3NyAxMTMuNDcxNzc4IDEzOC4wODc3MzEgMTEzLjQ3MTc3OCAyMC42MDM5NiAwIDExNS43MDE3NzQtNzkuODc5ODQ0IDEzNy43OTM3MzEtMTEzLjQ3MTc3OCAxMS4wMDU5NzktMTYuNzQzOTY3IDE4Ljc3OTk2My0zNS4wNzE5MzIgMTcuNDgzOTY1LTU5LjI1MTg4NC0yLjI4OTk5Ni00Mi43OTk5MTYtMzcuMjkzOTI3LTc4LjE1NTg0Ny04MC4xNTk4NDMtNzguMTU1ODQ4IiBmaWxsPSIjRkY1RThBIiBwLWlkPSIyMTQxIj48L3BhdGg+PHBhdGggZD0iTTUxMi4xNDcgNzM3LjEyODU2Yy03LjIyNTk4NiAwLTI0LjE0OTk1MyAwLTg0Ljc0OTgzNS01MC4xNDE5MDItMjcuMDMxOTQ3LTIyLjM2Mzk1Ni02MC44NzE4ODEtNTMuNzgxODk1LTc0Ljc3Mzg1NC03NC44Nzc4NTQtMTAuMTk5OTgtMTUuNDc1OTctMjMuNTM3OTU0LTQwLjA2MTkyMi0yMS42ODk5NTctNzQuNzUxODU0IDMuMDc1OTk0LTU3LjQ1Nzg4OCA0OS41NDU5MDMtMTAyLjQ2MzggMTA1Ljc5Nzc5My0xMDIuNDYzNzk5IDMyLjM1NTkzNyAwIDU4LjUzNzg4NiAxNy45NjM5NjUgNzUuNDYxODUzIDMzLjk5MzkzMyAxNy4wOTc5NjctMTYuMDE3OTY5IDQzLjM1NTkxNS0zMy45OTM5MzQgNzUuMDc1ODUzLTMzLjk5MzkzMyA1Ni4yNTM4OSAwIDEwMi43MjM3OTkgNDUuMDA3OTEyIDEwNS43OTk3OTMgMTAyLjQ2MTc5OSAxLjg1NTk5NiAzNC42MTE5MzItMTEuNDc3OTc4IDU5LjIyMzg4NC0yMS42NjU5NTcgNzQuNzMxODU1LTE0LjAxOTk3MyAyMS4zMTc5NTgtNDcuNjgxOTA3IDUyLjcwOTg5Ny03NC41MTE4NTUgNzQuOTg1ODUzLTYwLjMwMTg4MiA1MC4wNTU5MDItNzcuNDMxODQ5IDUwLjA1NTkwMi04NC43NDM4MzQgNTAuMDU1OTAyeiBtLTMuMjQ3OTk0LTUwLjk5Nzl6IG0tNzIuMTcxODU5LTE5OS44ODU2MWMtMjguNDY5OTQ0IDAtNTIuOTI1ODk3IDI0LjE1Nzk1My01NC41MTU4OTQgNTMuODUxODk1LTAuODE1OTk4IDE1LjI5Mzk3IDMuMTU3OTk0IDI4LjM4MTk0NSAxMy4yODc5NzUgNDMuNzUzOTE1IDE3Ljc0MTk2NSAyNi45MTc5NDcgOTIuODQ3ODE5IDg5Ljc4NzgyNSAxMTYuNzA1NzcyIDEwMC45NzU4MDIgMjMuNjUzOTU0LTExLjA0MTk3OCA5OC40NTk4MDgtNzMuODU1ODU2IDExNi4yODM3NzItMTAwLjk1NzgwMiAxMC4yNjk5OC0xNS42Mjc5NjkgMTQuMTI1OTcyLTI4LjMwOTk0NSAxMy4yOTU5NzUtNDMuNzY5OTE1LTEuNTg5OTk3LTI5LjY5NTk0Mi0yNi4wNDU5NDktNTMuODU1ODk1LTU0LjUxNzg5NC01My44NTU4OTUtMjMuNTQzOTU0IDAtNDcuNjY3OTA3IDI2Ljc0OTk0OC01NC4yNjE4OTQgMzYuMTE5OTMtNC44ODE5OSA2LjkzMTk4Ni0xMi43OTc5NzUgMTEuMDg3OTc4LTIxLjM0Nzk1OCAxMC44OTc5NzhhMjUuNjY3OTUgMjUuNjY3OTUgMCAwIDEtMjEuMDQxOTU5LTExLjQ3NTk3N2MtNi42NDU5ODctOS44MTU5ODEtMjkuNDA1OTQzLTM1LjUzOTkzMS01My44ODc4OTUtMzUuNTM5OTMxek02MTIuMzQwODA0IDg5NC42MzQyNTNIMzM1LjAzOTM0NmMtMTQuMTgxOTcyIDAtMjUuNjc3OTUtMTEuNDk3OTc4LTI1LjY3Nzk1LTI1LjY3Nzk1czExLjQ5NTk3OC0yNS42Nzc5NSAyNS42Nzc5NS0yNS42Nzc5NWgyNzcuMzAzNDU4YzE0LjE4MTk3MiAwIDI1LjY3Nzk1IDExLjQ5Nzk3OCAyNS42Nzc5NSAyNS42Nzc5NXMtMTEuNDk3OTc4IDI1LjY3Nzk1LTI1LjY3OTk1IDI1LjY3Nzk1ek02ODguOTY0NjU0IDg5NC42NDAyNTNhMjUuODExOTUgMjUuODExOTUgMCAwIDEtMTguMTUzOTY0LTcuNTIzOTg2IDI1LjM0MTk1MSAyNS4zNDE5NTEgMCAwIDEtNS41NzE5ODktOC4zNDU5ODMgMjUuMjU5OTUxIDI1LjI1OTk1MSAwIDAgMS0xLjk1MTk5Ni05LjgwOTk4MWMwLTEuNjY1OTk3IDAuMTU0LTMuMzYzOTkzIDAuNDg3OTk5LTUuMDMxOTkgMC4zMzM5OTktMS42MTc5OTcgMC44MjE5OTgtMy4yMzU5OTQgMS40NjM5OTctNC44MDE5OTFhMjYuMDc5OTQ5IDI2LjA3OTk0OSAwIDAgMSA1LjU0NTk4OS04LjMxNzk4NCAyNi4wODk5NDkgMjYuMDg5OTQ5IDAgMCAxIDguMzQzOTg0LTUuNTczOTg5IDI2Ljk5Mzk0NyAyNi45OTM5NDcgMCAwIDEgNC44MDE5OS0xLjQ1OTk5N2M4LjM0NTk4NC0xLjY2OTk5NyAxNy4yMjk5NjYgMS4wNTE5OTggMjMuMTg1OTU1IDcuMDM1OTg2IDEuMTgxOTk4IDEuMTgxOTk4IDIuMjU5OTk2IDIuNDg5OTk1IDMuMTgzOTk0IDMuOTAxOTkzIDAuOTIzOTk4IDEuMzg1OTk3IDEuNzE5OTk3IDIuODc1OTk0IDIuMzYxOTk1IDQuNDE1OTkxIDAuNjQxOTk5IDEuNTY1OTk3IDEuMTI5OTk4IDMuMTU3OTk0IDEuNDYzOTk3IDQuODAxOTkxIDAuMzMzOTk5IDEuNjY5OTk3IDAuNTEzOTk5IDMuMzY1OTkzIDAuNTEzOTk5IDUuMDMxOTlhMjYuMDA3OTQ5IDI2LjAwNzk0OSAwIDAgMS00LjMzOTk5MSAxNC4yNDk5NzIgMjQuNDg5OTUyIDI0LjQ4OTk1MiAwIDAgMS0zLjE4Mzk5NCAzLjkwNTk5MiAyNS44NTE5NSAyNS44NTE5NSAwIDAgMS0xOC4xNTE5NjUgNy41MjE5ODZ6IiBmaWxsPSIiIHAtaWQ9IjIxNDIiPjwvcGF0aD48cGF0aCBkPSJNOTE1LjAyNjIxMyAyNzUuMzI1NDYyYy02MC4wODc4ODMgMC0xMDguOTcxNzg3IDQ4Ljg4MzkwNS0xMDguOTcxNzg3IDEwOC45NzE3ODcgMCA1LjA4MTk5IDAuMzc3OTk5IDEwLjA2OTk4IDEuMDUxOTk4IDE0Ljk2Nzk3MWwtNzMuNTQxODU3IDE1LjkzOTk2OS0xNDguNTg3NzEtMTc4LjQ0NTY1MWMyMi4wODc5NTctMTkuOTU1OTYxIDM1Ljk5MTkzLTQ4LjgwMzkwNSAzNS45OTE5My04MC44NDc4NDMgMC02MC4wODc4ODMtNDguODgzOTA1LTEwOC45NzE3ODctMTA4Ljk3MTc4Ny0xMDguOTcxNzg3cy0xMDguOTcxNzg3IDQ4Ljg4MzkwNS0xMDguOTcxNzg3IDEwOC45NzE3ODdjMCAzMi4wNDE5MzcgMTMuOTAzOTczIDYwLjg4OTg4MSAzNS45OTE5MyA4MC44NDc4NDNsLTE0OC41ODc3MSAxNzguNDQ5NjUxLTczLjU0MTg1Ny0xNS45Mzk5NjljMC42NzU5OTktNC44OTU5OSAxLjA1MTk5OC05Ljg4Nzk4MSAxLjA1MTk5OC0xNC45Njc5NzEgMC02MC4wODc4ODMtNDguODgzOTA1LTEwOC45NzE3ODctMTA4Ljk3MTc4Ny0xMDguOTcxNzg3UzAgMzI0LjIwOTM2NyAwIDM4NC4yOTUyNDljMCA2MC4wODM4ODMgNDguODgzOTA1IDEwOC45Njk3ODcgMTA4Ljk3MTc4NyAxMDguOTY5Nzg4IDAuNzY1OTk5IDAgMS41MTk5OTctMC4wNDQgMi4yODE5OTYtMC4wNTZMMTY5LjE3OTY3IDc5MS44NzQ0NTNjMC4wMDggMC4wNDQgMC4wMiAwLjA4MiAwLjAzIDAuMTI2djE1OS4zODM2ODljMCAxNC4xNzc5NzIgMTEuNDk1OTc4IDI1LjY3Nzk1IDI1LjY3Nzk0OSAyNS42Nzc5NWg2MzQuMjI2NzYyYzE0LjE4MTk3MiAwIDI1LjY3Nzk1LTExLjQ5Nzk3OCAyNS42Nzc5NDktMjUuNjc3OTV2LTE1OS4zODM2ODljMC4wMDgtMC4wNDQgMC4wMi0wLjA4MiAwLjAzLTAuMTI2bDU3LjkyNTg4Ny0yOTguNjY3NDE2YzAuNzYxOTk5IDAuMDE2IDEuNTE3OTk3IDAuMDU2IDIuMjgxOTk2IDAuMDU2IDYwLjA4Nzg4MyAwIDEwOC45NzE3ODctNDguODgzOTA1IDEwOC45NzE3ODctMTA4Ljk2OTc4OC0wLjAwNC02MC4wODM4ODMtNDguODg3OTA1LTEwOC45Njc3ODctMTA4Ljk3NTc4Ny0xMDguOTY3Nzg3ek01MTEuOTk3IDk4LjI5MTgwOGMzMS43Njk5MzggMCA1Ny42MTc4ODcgMjUuODQ1OTUgNTcuNjE3ODg3IDU3LjYxNzg4N3MtMjUuODQ1OTUgNTcuNjEzODg3LTU3LjYxNzg4NyA1Ny42MTM4ODhTNDU0LjM3OTExMyAxODcuNjc5NjMzIDQ1NC4zNzkxMTMgMTU1LjkwOTY5NXMyNS44NDc5NS01Ny42MTc4ODcgNTcuNjE3ODg3LTU3LjYxNzg4N3pNNTEuMzUzOSAzODQuMjk1MjQ5YzAtMzEuNzY5OTM4IDI1Ljg0NTk1LTU3LjYxNzg4NyA1Ny42MTc4ODctNTcuNjE3ODg3czU3LjYxNzg4NyAyNS44NDU5NSA1Ny42MTc4ODggNTcuNjE3ODg3LTI1Ljg0NTk1IDU3LjYxMzg4Ny01Ny42MTc4ODggNTcuNjEzODg4LTU3LjYxNzg4Ny0yNS44NDE5NS01Ny42MTc4ODctNTcuNjEzODg4eiBtNzUyLjA4MDUzMSA1NDEuNDE0OTQzSDIyMC41NjE1Njl2LTExMy4wNDM3NzloNTgyLjg3Mjg2MnYxMTMuMDQzNzc5eiBtNS4wMDE5OS0xNjQuNDAxNjc5SDIxNS41NjE1NzlMMTYxLjAwNTY4NiA0ODAuMDE1MDYyYTEwOS43Nzc3ODYgMTA5Ljc3Nzc4NiAwIDAgMCAzNi41NjE5MjgtMzIuMzkxOTM2bDk3LjE5NzgxIDIxLjA2Nzk1OWEyNS43MDU5NSAyNS43MDU5NSAwIDAgMCAyNS4xNzE5NTEtOC42NjU5ODNsMTY1LjI3NTY3Ny0xOTguNDg3NjEzYTEwOC44NzE3ODcgMTA4Ljg3MTc4NyAwIDAgMCAyNi43ODk5NDggMy4zMzk5OTRjOS4yNDE5ODIgMCAxOC4yMTE5NjQtMS4xNjU5OTggMjYuNzg5OTQ4LTMuMzM5OTk0bDE2NS4yNzU2NzcgMTk4LjQ4NzYxM2EyNS42OTU5NSAyNS42OTU5NSAwIDAgMCAyNS4xNzE5NTEgOC42NjU5ODNsOTcuMTk3ODEtMjEuMDY3OTU5YTEwOS43MzM3ODYgMTA5LjczMzc4NiAwIDAgMCAzNi41NjE5MjggMzIuMzkxOTM2bC01NC41NjM4OTMgMjgxLjI5MzQ1MXogbTEwNi41ODk3OTItMzE5LjM5NTM3NmMtMzEuNzY5OTM4IDAtNTcuNjE3ODg3LTI1Ljg0Mzk1LTU3LjYxNzg4OC01Ny42MTM4ODhzMjUuODQ1OTUtNTcuNjE3ODg3IDU3LjYxNzg4OC01Ny42MTc4ODdjMzEuNzY5OTM4IDAgNTcuNjE3ODg3IDI1Ljg0NTk1IDU3LjYxNzg4NyA1Ny42MTc4ODdzLTI1Ljg0Nzk1IDU3LjYxMzg4Ny01Ny42MTc4ODcgNTcuNjEzODg4eiIgZmlsbD0iIiBwLWlkPSIyMTQzIj48L3BhdGg+PC9zdmc+" />
+  <view class="title">加入会员·每年预计节省806元</view>
+  <view class="subTitle">5折开卡></view>
+</view>
+<view class="flashWrapper">
+  <view class="titleWrapper">
+    <view class="title">限时抢购</view>
+    <view class="timeWrapper">
+      <view class="timeItem hour">7</view>
+      <view class="timeItem minute">25</view>
+      <view class="timeItem second">51</view>
+    </view>
+    <view class="more">更多</view>
+  </view>
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="scroll-view-item" wx:for="{{flash_sale_product_list}}" wx:for-item="item" wx:key="index">
+      <image class="itemImage" src="{{item.small_image}}" />
+      <view class="title">{{item.name}}</view>
+      <view class="price">
+        <view class="nowPrice">{{item.price}}</view>
+        <view class="originPrice">{{item.origin_price}}</view>
+        <image class="buyCar" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTc0OTI3ODY5Nzc3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjkzNTAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTAgMG0yMDQuOCAwbDYxNC40IDBxMjA0LjggMCAyMDQuOCAyMDQuOGwwIDYxNC40cTAgMjA0LjgtMjA0LjggMjA0LjhsLTYxNC40IDBxLTIwNC44IDAtMjA0LjgtMjA0LjhsMC02MTQuNHEwLTIwNC44IDIwNC44LTIwNC44WiIgZmlsbD0iIzAwOTY4OCIgcC1pZD0iOTM1MSI+PC9wYXRoPjxwYXRoIGQ9Ik0zOTYuOCA2NjUuNmE1Ni41NzYgNTYuNTc2IDAgMCAxIDIxLjc2IDQuMzUyIDU0LjAxNiA1NC4wMTYgMCAwIDEgMTcuOTIgMTEuNzc2IDU4LjExMiA1OC4xMTIgMCAwIDEgMTIuMDMyIDE3LjkyIDU0LjUyOCA1NC41MjggMCAwIDEgMCA0My41MiA1Ny4zNDQgNTcuMzQ0IDAgMCAxLTI5Ljk1MiAyOS45NTIgNTMuMjQ4IDUzLjI0OCAwIDAgMS0yMS43NiA0LjYwOCA1NC43ODQgNTQuNzg0IDAgMCAxLTIyLjUyOC00LjYwOCA1Ny4zNDQgNTcuMzQ0IDAgMCAxLTI5Ljk1Mi0yOS45NTIgNTQuNTI4IDU0LjUyOCAwIDAgMSAwLTQzLjUyIDU4LjExMiA1OC4xMTIgMCAwIDEgMTIuMDMyLTE3LjkyIDU0LjAxNiA1NC4wMTYgMCAwIDEgMTcuOTItMTEuNzc2IDU4LjM2OCA1OC4zNjggMCAwIDEgMjIuNTI4LTQuMzUyek02NDguNzA0IDY2Ny45MDRhNTguODggNTguODggMCAwIDEgMjIuMDE2IDQuMzUyIDUzLjI0OCA1My4yNDggMCAwIDEgMTguMTc2IDExLjc3NiA1OC4xMTIgNTguMTEyIDAgMCAxIDEyLjAzMiAxNy45MiA1NC41MjggNTQuNTI4IDAgMCAxIDAgNDMuNTIgNTguMTEyIDU4LjExMiAwIDAgMS0xMi4wMzIgMTcuOTIgNTcuMzQ0IDU3LjM0NCAwIDAgMS0xOC4xNzYgMTIuMDMyIDU1LjU1MiA1NS41NTIgMCAwIDEtMjIuMDE2IDQuNjA4IDUzLjUwNCA1My41MDQgMCAwIDEtMjEuNzYtNC42MDggNTcuMzQ0IDU3LjM0NCAwIDAgMS0yOS45NTItMjkuOTUyIDU0LjUyOCA1NC41MjggMCAwIDEgMC00My41MiA1OC4xMTIgNTguMTEyIDAgMCAxIDEyLjAzMi0xNy45MiA1NC4wMTYgNTQuMDE2IDAgMCAxIDE3LjkyLTExLjc3NiA1Ni41NzYgNTYuNTc2IDAgMCAxIDIxLjc2LTQuMzUyek03OTAuMDE2IDMzOS43MTJhMjkuOTUyIDI5Ljk1MiAwIDAgMC0xMy4zMTItMTEuMjY0IDYxLjY5NiA2MS42OTYgMCAwIDAtMjUuNi00LjYwOGgtNDguNjRhMzUuMDcyIDM1LjA3MiAwIDAgMC02NC41MTItMTQuMzM2IDk3Ljc5MiA5Ny43OTIgMCAwIDAtMTgzLjA0LTcuNjggNTkuOTA0IDU5LjkwNCAwIDAgMC02OS44ODggMjIuMDE2aC00OC44OTZxLTEuNzkyLTEyLjAzMi0zLjU4NC0yMy4wNGwtMi4zMDQtMTcuOTJhMTM2Ljk2IDEzNi45NiAwIDAgMC0yLjMwNC0xMy41NjhsLTMuMDcyLTEwLjI0YTM1LjA3MiAzNS4wNzIgMCAwIDAtNi4xNDQtMTEuNTIgMzIuNzY4IDMyLjc2OCAwIDAgMC0xMS41Mi04Ljk2IDQzLjUyIDQzLjUyIDAgMCAwLTE5LjQ1Ni0zLjU4NEgyMjYuNTZhMzAuNDY0IDMwLjQ2NCAwIDAgMC0yMS43NiA3LjkzNiAyNS42IDI1LjYgMCAwIDAtOC4xOTIgMTkuOTY4IDY1Ljc5MiA2NS43OTIgMCAwIDAgMS41MzYgMTMuMzEyIDQxLjk4NCA0MS45ODQgMCAwIDAgNS4zNzYgMTMuNTY4IDM5LjQyNCAzOS40MjQgMCAwIDAgOS45ODQgMTEuMDA4IDI1LjYgMjUuNiAwIDAgMCAxNS4xMDQgNC42MDhoNDUuMzEycTE0LjU5MiA3NS4wMDggMjUuNiAxMzYuMTkybDkuNzI4IDUxLjIgOC43MDQgNDYuNTkyIDYuNjU2IDM0LjgxNnEyLjgxNiAxMy44MjQgMy4zMjggMTcuNjY0YTE3NC41OTIgMTc0LjU5MiAwIDAgMCA1LjEyIDE5LjQ1NiA4Ni43ODQgODYuNzg0IDAgMCAwIDguNzA0IDE4Ljk0NCA0Ni4wOCA0Ni4wOCAwIDAgMCAxMy41NjggMTQuMzM2IDM1Ljg0IDM1Ljg0IDAgMCAwIDIwLjIyNCA1LjM3NmgzMTcuOTUyYTI1LjYgMjUuNiAwIDAgMCAyMi43ODQtOC43MDQgMzcuMTIgMzcuMTIgMCAwIDAgNS42MzItMjAuOTkycTAtMjUuNi0yOS4xODQtMjUuNkgzODcuMDcybC04LjQ0OC01NC41MjhINjk2LjMyYTQ1LjgyNCA0NS44MjQgMCAwIDAgMjkuNDQtOS40NzIgNjkuNjMyIDY5LjYzMiAwIDAgMCAxOS43MTItMzMuNTM2cTQuMzUyLTExLjUyIDExLjI2NC0zMS40ODhsMTMuODI0LTQwLjE5MiAxMy4wNTYtMzcuMTIgNy45MzYtMjIuMjcyYTQ3LjYxNiA0Ny42MTYgMCAwIDAgMi4wNDgtMTMuMDU2IDI1LjYgMjUuNiAwIDAgMC0zLjU4NC0xMy4zMTJ6IG0tMzYwLjQ0OCAxNDIuMDhhMTIuOCAxMi44IDAgMCAxLTE1Ljg3Mi04LjcwNGwtMTkuNzEyLTY5LjM3NmExMi44IDEyLjggMCAxIDEgMjUuNi02LjkxMmwxOS43MTIgNjkuMzc2YTEyLjggMTIuOCAwIDAgMS05LjcyOCAxNS42MTZ6IG05My42OTYgMGExMi44IDEyLjggMCAwIDEtMTUuODcyLTguNzA0bC0xOS43MTItNjkuMzc2YTEyLjggMTIuOCAwIDEgMSAyNS42LTYuOTEybDE5LjcxMiA2OS4zNzZhMTIuOCAxMi44IDAgMCAxLTkuNzI4IDE1LjYxNnogbTgxLjQwOCAwYTEyLjggMTIuOCAwIDAgMS0xNS44NzItOC43MDRsLTE5LjcxMi02OS4zNzZhMTIuOCAxMi44IDAgMSAxIDI1LjYtNi45MTJsMTkuNzEyIDY5LjEyYTEyLjggMTIuOCAwIDAgMS05LjcyOCAxNS44NzJ6IG04MS40MDggMGExMi44IDEyLjggMCAwIDEtMTUuODcyLTguNzA0bC0xOS43MTItNjkuMzc2YTEyLjggMTIuOCAwIDEgMSAyNS42LTYuOTEybDE5LjcxMiA2OS4zNzZhMTIuOCAxMi44IDAgMCAxLTkuNzI4IDE1LjYxNnoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjkzNTIiPjwvcGF0aD48L3N2Zz4=" />
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="specialZone">
+  <view class="titleWrapper">
+    <view class="title">特色专区</view>
+  </view>
+  <view class="wrapperItem">
+    <view class="newItem" wx:for="{{specialZone.newItemList}}" wx:for-item="item" wx:key="index">
+      <view class="itemTitle">{{item.title}}</view>
+      <view class="itemSubTitle">{{item.subtitle}}</view>
+      <image class="itemImg" src="{{item.imageOne}}" />
+      <image class="itemImg" src="{{item.imageTwo}}" />
+    </view>
+    <view class="hotItem" wx:for="{{specialZone.hotItemList}}" wx:for-item="item" wx:key="index">
+      <view class="itemTitle hotItemTitle">{{item.title}}</view>
+      <view class="itemSubTitle">{{item.subtitle}}</view>
+      <image class="itemImg" src="{{item.imageOne}}" />
+      <image class="itemImg" src="{{item.imageTwo}}" />
+    </view>
+    <view class="vipItem" wx:for="{{specialZone.vipItemList}}" wx:for-item="item" wx:key="index">
+      <view class="itemTitle vipItemTitle">{{item.title}}</view>
+      <view class="itemSubTitle">{{item.subtitle}}</view>
+      <image class="itemImg" src="{{item.imageOne}}" />
+      <image class="itemImg" src="{{item.imageTwo}}" />
+    </view>
+    <view class="otherItem" wx:for="{{specialZone.otherItemList}}" wx:for-item="item" wx:key="index">
+      <view class="itemTitle vipItemTitle">{{item.title}}</view>
+      <view class="itemSubTitle">{{item.subtitle}}</view>
+      <image class="otherImage" src="../../images/special/peanut.jpeg" />
+    </view>
+    <view class="lowPrice" wx:for="{{specialZone.lowPriceItemList}}" wx:for-item="item" wx:key="index">
+      <view class="itemTitle vipItemTitle">{{item.title}}</view>
+      <view class="itemSubTitle">{{item.subtitle}}</view>
+      <image class="lowPriceImage" src="{{item.image}}" />
+    </view>
+  </view>
+</view>
+<view class="tabBar">
+  <view class="tabBarItem" data-num="{{index}}" wx:for="{{tabBarList}}" wx:for-item="item" wx:key="index" bindtap="tabClick">
+    <view class="textItem title {{index === tabBarIndex ? 'selectText': ''}}">{{item}}</view>
+    <view class="textItem {{index === tabBarIndex ? 'bottomLine': ''}}"></view>
+  </view>
+</view>
+<swiper class="tabBarSwiperWrapper" style='width:100%;height:{{swiperHeight}}px'>
+  {{swiperHeight}}
+  <block>
+    <swiper-item class="swiperItem1">
+      <product-item wx:for="{{allProductList}}" wx:for-item="item" wx:key="index" detail="{{item}}"></product-item>
+    </swiper-item>
+  </block>
+  <block>
+    <swiper-item class="swiperItem2">
+      <product-item></product-item>
+    </swiper-item>
+  </block>
+  <block>
+    <swiper-item class="swiperItem3">
+      <product-item></product-item>
+    </swiper-item>
+  </block>
+  <block>
+    <swiper-item class="swiperItem4">
+      <product-item></product-item>
+    </swiper-item>
+  </block>
+</swiper>

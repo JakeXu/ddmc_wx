@@ -1,0 +1,382 @@
+.head {
+  width: 100%;
+  height: 100%;
+  background: url('http://518taole.7-orange.cn/backImage.png');
+}
+.head .wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 94rpx;
+  line-height: 94rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: solid 1px #eeeeee;
+  color: white;
+  display: flex;
+  background: #fff;
+}
+.head .wrapper .locationWrapper {
+  margin-top: 18.75rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  max-width: 55%;
+  white-space: nowrap;
+  opacity: 0.6;
+  min-width: 23%;
+  background-color: black;
+  border-radius: 94rpx;
+}
+.head .wrapper .locationWrapper .icon {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  margin-top: 6px;
+}
+.head .wrapper .locationWrapper .address {
+  float: right;
+  line-height: 28rpx;
+  padding-left: 5rpx;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  min-width: 20%;
+}
+.head .wrapper .searchWrapper {
+  flex: 1;
+  top: 18.75rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+.head .wrapper .searchWrapper .searchContent {
+  margin-top: 18.75rpx;
+  flex: 1;
+  margin-right: 2%;
+  margin-left: 2%;
+  border-radius: 94rpx;
+  height: 56.25rpx;
+  line-height: 56.25rpx;
+  text-align: center;
+  background: #f2f2f2;
+  vertical-align: middle;
+}
+.head .wrapper .searchWrapper .searchContent .iconSearchWrapper .searchPrompt {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 0.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #999999;
+}
+.head .swiperWrapper .swiper-box {
+  padding-top: 90rpx;
+  margin: 0 auto;
+  width: 95%;
+  height: 300rpx;
+  border-radius: 15rpx;
+}
+.head .swiperWrapper .swiper-box .img {
+  width: 100%;
+  height: 100%;
+}
+.head .swiperWrapper .tip {
+  margin-top: 5.4rpx;
+  position: relative;
+  height: 80rpx;
+}
+.head .swiperWrapper .tip .tipBox {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+.head .swiperWrapper .tip .tipBox .img {
+  vertical-align: middle;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 6rpx;
+}
+.head .swiperWrapper .tip .tipBox .tipText {
+  font-size: 18rpx;
+  color: #45c763;
+}
+.adImg {
+  width: 100%;
+  height: 180rpx;
+  margin-bottom: -6rpx;
+}
+.typeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.typeWrapper .typeItem {
+  display: flex;
+  padding: 20rpx 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  font-size: 12px;
+  color: #7d7e80;
+}
+.typeWrapper .typeItem .img {
+  display: block;
+  margin-bottom: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.vipPage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15rpx auto;
+  height: 60rpx;
+  background-color: #3bba63;
+  width: 95%;
+  border-radius: 6rpx;
+  opacity: 0.9;
+}
+.vipPage .icon {
+  padding-left: 15rpx;
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+}
+.vipPage .title {
+  margin-left: 15rpx;
+  font-size: 25rpx;
+  color: white;
+}
+.vipPage .subTitle {
+  margin-left: auto;
+  margin-right: 45rpx;
+  font-size: 25rpx;
+  color: white;
+}
+.flashWrapper {
+  margin-top: 18.75rpx;
+  padding: 37.5rpx 0 28.125rpx 0;
+  background-color: white;
+}
+.flashWrapper .titleWrapper {
+  margin: 0 18.75rpx 18.75rpx 18.75rpx;
+  height: 46.875rpx;
+}
+.flashWrapper .titleWrapper .title {
+  float: left;
+  border-left: 4px #3cb963 solid;
+  padding-left: 9.375rpx;
+  height: 39.375rpx;
+  line-height: 39.375rpx;
+  vertical-align: middle;
+  font-size: 35.625rpx;
+}
+.flashWrapper .titleWrapper .timeWrapper {
+  float: left;
+  height: 39.375rpx;
+  line-height: 39.375rpx;
+  vertical-align: middle;
+}
+.flashWrapper .titleWrapper .timeWrapper .timeItem {
+  float: left;
+  margin-left: 8rpx;
+  width: 45rpx;
+  background: black;
+  color: #fff;
+  font-size: 25.625rpx;
+  text-align: center;
+}
+.flashWrapper .titleWrapper .more {
+  color: #3cb963;
+  float: right;
+  font-size: 24rpx;
+}
+.flashWrapper .scroll-view_H {
+  width: 100%;
+  white-space: nowrap;
+}
+.flashWrapper .scroll-view_H .scroll-view-item {
+  display: inline-block;
+  padding-right: 0.5rem;
+  width: 200rpx;
+  vertical-align: top;
+}
+.flashWrapper .scroll-view_H .scroll-view-item .itemImage {
+  display: block;
+  width: 100%;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.flashWrapper .scroll-view_H .scroll-view-item .title {
+  padding: 6rpx;
+  width: 100%;
+  display: block;
+  height: 54rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  white-space: pre-wrap;
+}
+.flashWrapper .scroll-view_H .scroll-view-item .price {
+  position: relative;
+  padding-left: 15rpx;
+}
+.flashWrapper .scroll-view_H .scroll-view-item .price .nowPrice {
+  color: #f37078;
+  font-size: 27.84rpx;
+}
+.flashWrapper .scroll-view_H .scroll-view-item .price .originPrice {
+  font-size: 20.625rpx;
+  color: #999999;
+  text-decoration: line-through;
+}
+.flashWrapper .scroll-view_H .scroll-view-item .price .buyCar {
+  position: absolute;
+  right: 18rpx;
+  top: 20rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+.specialZone {
+  margin-top: 18.75rpx;
+  padding: 37.5rpx 0 28.125rpx 0;
+  background-color: white;
+}
+.specialZone .titleWrapper {
+  margin: 0 18.75rpx 18.75rpx 18.75rpx;
+  height: 46.875rpx;
+}
+.specialZone .titleWrapper .title {
+  float: left;
+  border-left: 4px #3cb963 solid;
+  padding-left: 9.375rpx;
+  height: 39.375rpx;
+  line-height: 39.375rpx;
+  vertical-align: middle;
+  font-size: 35.625rpx;
+}
+.specialZone .wrapperItem {
+  width: 95%;
+  height: 300rpx;
+  border: 3rpx solid #dddbc0;
+  margin-left: 2.5%;
+}
+.specialZone .wrapperItem .newItem {
+  float: left;
+  width: 49.85%;
+  height: 150rpx;
+  border-right: 3rpx solid #dddbc0;
+  border-bottom: 3rpx solid #dddbc0;
+}
+.specialZone .wrapperItem .hotItem {
+  float: left;
+  width: 49.85%;
+  height: 150rpx;
+  border-bottom: 3rpx solid #dddbc0;
+  border-right: none;
+}
+.specialZone .wrapperItem .hotItem .hotItemTitle {
+  background-image: linear-gradient(150deg, #b2233f, #f70d3c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.specialZone .wrapperItem .vipItem {
+  float: left;
+  width: 49.9%;
+  height: 150rpx;
+  border-right: 0.01rem solid #dddbc0;
+}
+.specialZone .wrapperItem .vipItem .vipItemTitle {
+  background-image: linear-gradient(150deg, #0e9e09, #51b14d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.specialZone .wrapperItem .otherItem {
+  float: left;
+  width: 25%;
+  border-right: 0.01rem solid #dddbc0;
+  height: 150rpx;
+}
+.specialZone .wrapperItem .otherItem .otherTitle {
+  font-size: 24rpx;
+  color: black;
+  padding-left: 15rpx;
+  padding-top: 5rpx;
+}
+.specialZone .wrapperItem .otherItem .otherSubTitle {
+  font-size: 13.5rpx;
+  color: grey;
+  padding-left: 15rpx;
+}
+.specialZone .wrapperItem .otherItem .otherImage {
+  width: 75rpx;
+  height: 75rpx;
+  padding-left: 30rpx;
+  border-radius: 50%;
+}
+.specialZone .wrapperItem .lowPrice {
+  float: left;
+  width: 24.5%;
+  height: 5rem;
+}
+.specialZone .wrapperItem .lowPrice .lowPriceImage {
+  width: 75rpx;
+  height: 75rpx;
+  padding-left: 30rpx;
+  border-radius: 50%;
+}
+.specialZone .wrapperItem .itemTitle {
+  width: 100%;
+  font-size: 24rpx;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(135deg, red, orange);
+  color: transparent;
+  padding-left: 15rpx;
+  padding-top: 8rpx;
+}
+.specialZone .wrapperItem .itemSubTitle {
+  font-size: 24rpx;
+  color: grey;
+  padding-left: 15rpx;
+}
+.specialZone .wrapperItem .itemImg {
+  padding: 0rpx 15rpx 0 21rpx;
+  width: 90rpx;
+  height: 75rpx;
+}
+.tabBar {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabBar .tabBarItem {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tabBar .tabBarItem .textItem {
+  font-size: 30rpx;
+  color: #7d7e80;
+}
+.tabBar .tabBarItem .title {
+  padding-bottom: 8rpx;
+}
+.tabBar .tabBarItem .selectText {
+  color: #28be57;
+}
+.tabBar .tabBarItem .bottomLine {
+  width: 90rpx;
+  height: 5rpx;
+  background: #28be57;
+}
+.tabBarSwiperWrapper .swiperItem {
+  background: #f2f2f2;
+}
